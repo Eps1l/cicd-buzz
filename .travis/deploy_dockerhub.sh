@@ -10,3 +10,4 @@ echo "Step 2 Build" >> log
 docker build -f Dockerfile -t $DOCKER_USER/$TRAVIS_REPO_SLUG:$TAG .  >> log
 echo "Step 1 Push" >> log
 docker push $DOCKER_USER/$TRAVIS_REPO_SLUG  >> log
+cat log
