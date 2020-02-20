@@ -7,7 +7,7 @@ else
     TAG="$TRAVIS_BRANCH"
 fi
 echo "Step 2 Build" >> log
-docker build -f Dockerfile -t $DOCKER_USER/$TRAVIS_REPO_SLUG:$TAG .  >> log
-echo "Step 1 Push" >> log
-docker push $DOCKER_USER/$TRAVIS_REPO_SLUG  >> log
+docker build -f Dockerfile -t $DOCKER_USER/cicd-buzz:$TAG .  >> log
+echo "Step 3 Push" >> log
+docker push $DOCKER_USER/cicd-buzz  >> log
 cat log
